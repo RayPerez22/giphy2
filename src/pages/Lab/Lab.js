@@ -1,38 +1,35 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
+function Lab() {
+	//useState is a React hook
+	const [gifUrl, setGifUrl] = useState(null);
+	const url = 'https://api.giphy.com/v1/gifs/random?api_key=';
+	const apiKey = process.env.REACT_APP_API_KEY;
 
-const Lab = () => {
-    //useState is a React hook
-    const [gifUrl, setGifUrl] = useState('')
-    const url = 'https://api.giphy.com/v1/gifs/random?api_key=IcRAfC33HiWmnEiDfycjIKlAcgRA2Gfs&tag=&rating=g'
+	// Create a function that pulls a random Gif from Giphy API
+	// Async/Await => newer alternative for Promise chaining
+	// https://javascript.info/async-await
 
-    // Create a function that grabs a random Gif from Giphy API
-    // Async/Await => newer syntax of thennables
-    // https://javascript.info/async-await
+	const getGif = async () => {
+		try {
+			const res = await axios.get(url + apiKey);
+			setGifUrl(res.data.data.images.original.url);
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
-    const getGif = async () => {
-        try {
-            const res = await axios.get(url)
-            console.log(res)
-            setGifUrl(res.data.data.images.original.url)
-        } catch (error) {
-            console.log(error)
-        }}
+	useEffect(() => {
+		getGif();
+	}, []);
 
-        useEffect(() => {
-            getGif()
-        }, [])
+	return (
+		<div>
+			<button onClick={getGif}>Click Me</button> <br />
+			<img src={gifUrl} alt="random gif" height="500px" />
+		</div>
+	);
+}
 
-        return (
-            <div>
-                <button onClick={getGif}>Click Me</button> <br />
-                <img src={gifUrl} alt='' />
-            </div>
-
-        )
-    }
-
-
-export default Lab
+export default Lab;
