@@ -1,0 +1,24 @@
+.fullscreen-bg {
+	background: url('https://media1.giphy.com/media/3oEdv0DUQOagqEI30k/giphy.gif?cid=ecf05e47ltxzpgw135a9in9pfllyza4nckprpgwv67y0ifjo&rid=giphy.gif&ct=g')
+		no-repeat center;
+	filter: brightness(0.8);
+	position: fixed;
+	background-size: cover;
+	width: 100%; 
+	height: 100%;
+	left: 0;
+	z-index: -100;
+}
+
+/* urls{
+https://media1.giphy.com/media/3oEdv0DUQOagqEI30k/giphy.gif?cid=ecf05e47ltxzpgw135a9in9pfllyza4nckprpgwv67y0ifjo&rid=giphy.gif&ct=g
+
+https://media2.giphy.com/media/Piktd9AgEaOYrnZHG9/giphy.gif?cid=ecf05e47jfxuqxle7etrfjqizmuto5qw8ukt1xh8npmgffzm&rid=giphy.gif&ct=g
+
+https://media2.giphy.com/media/hM4OekkycahSas09bD/giphy.gif?cid=ecf05e47ltxzpgw135a9in9pfllyza4nckprpgwv67y0ifjo&rid=giphy.gif&ct=g
+
+https://media3.giphy.com/media/3oKIPeVkqUUptBUSoE/giphy.gif?cid=ecf05e47ltxzpgw135a9in9pfllyza4nckprpgwv67y0ifjo&rid=giphy.gif&ct=g
+
+https://media0.giphy.com/media/3osxYyFPDYvTCV4iIw/giphy.gif?cid=ecf05e47nwu4dttu6v7as4qysvbdqm98n3n57b372x14s8an&rid=giphy.gif&ct=g
+
+https://media0.giphy.com/media/l41YrvKgKPX5RJ1D2/giphy.gif?cid=ecf05e47va4xgtw9qyr42r7mqoa98einn87uwm9jgdsnamjo&rid=giphy.gif&ct=g} */
