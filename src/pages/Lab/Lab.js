@@ -25,9 +25,16 @@ function Lab() {
 	}, []);
 
 	return (
-		<div>
-			<button onClick={getGif}>Click Me</button> <br />
-			<img src={gifUrl} alt="random gif" height="500px" />
+		<div className="lab m-3">
+			<button
+				type="button"
+				className="btn btn-warning m-3"
+				onClick={getGif}>
+				Click Me
+			</button>
+			<div className="container-fluid m-3">
+				<img src={gifUrl} alt="random gif" height="500px" />
+			</div>
 		</div>
 	);
 }
